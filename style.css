@@ -142,6 +142,7 @@ ul {
 .btn {
     display: inline-block;
     padding: 10px 20px;
+    margin: 1px;
     background-color: #007bff; /* синя кнопка */
     color: white;
     text-decoration: none;
