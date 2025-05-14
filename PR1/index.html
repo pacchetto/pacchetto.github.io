@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Про підприємство</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        h1 {
+            color: #4CAF50;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .image-container {
+            margin-top: 20px;
+        }
+        .image-container img {
+            width: 550px;
+        }
+        .image-container a{
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        .image-container a:hover{
+            text-decoration: underlines;
+        }
+        .nav-links {
+            margin-top: 20px;
+        }
+        .nav-links a {
+            margin-right: 15px;
+            text-decoration: none;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <h1>Про підприємство</h1>
+        <p><strong>Назва підприємства:</strong> Бази даних Solutions</p>
+        <p><strong>Адреса:</strong> вул. Програмістів, 25, Київ, Україна</p>
+        <p><strong>Телефони офісу:</strong> +380 44 123 4567, +380 44 765 4321</p>
+        <p><strong>Час роботи:</strong> Пн-Пт: 9:00 - 18:00</p>
+
+        <h2>Прайс-лист</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Послуга</th>
+                    <th>Ціна</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Розробка бази даних</td>
+                    <td>5000 грн</td>
+                </tr>
+                <tr>
+                    <td>Консультації з налаштування</td>
+                    <td>1000 грн/година</td>
+                </tr>
+                <tr>
+                    <td>Оптимізація баз даних</td>
+                    <td>3000 грн</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="image-container">
+            <h3>Наш офіс:</h3>
+            <img src="media/office.jpg" alt="Офіс підприємства">
+            <p>Або <a href="https://wework.co.in/blogs/types-of-office-spaces/" target="_blank">переглянути зображення онлайн</a></p>
+        </div>
+        <footer class="nav-links">
+            <a href="author.html">Про автора</a>
+            <a href="index.html">На головну</a>
+        </footer>
+    </article>
+</body>
+</html>
