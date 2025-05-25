@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f9f9f9;
+}
+
+.marks-table {
+    width: 70%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    text-align: center;
+    color: #333;
+}
+
+.marks-table th,
+.marks-table td {
+    border: 1px solid #99e699;
+    padding: 10px;
+}
+
+.marks-table thead th {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+}
+
+.marks-table tbody tr:nth-child(odd) {
+    background-color: #e6ffe6;
+}
+
+.marks-table tbody tr:nth-child(even) {
+    background-color: #c6f7c6;
+}

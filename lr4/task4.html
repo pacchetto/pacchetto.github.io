@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>   
+        .battery {
+            position: relative;
+            width: 120px;
+            height: 60px;
+            border: 3px solid #333;
+            border-radius: 5px;
+            margin: 30px;
+        }
+        
+        .battery::before {
+            content: "";
+            position: absolute;
+            right: -10px;
+            top: 15px;
+            width: 5px;
+            height: 30px;
+            background-color: #333;
+            border-radius: 0 3px 3px 0;
+        }
+        
+        .battery::after {
+            content: "";
+            position: absolute;
+            left: 5px;
+            top: 5px;
+            height: 50px;
+            border-radius: 2px;
+        }
+        
+        .battery.low::after {
+            width: 30%;
+            background-color: #f44336;
+        }
+        
+        .battery.medium::after {
+            width: 60%;
+            background-color: #FFC107;
+        }
+        
+        .battery.high::after {
+            width: 90%;
+            background-color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <div class="battery low"></div>
+    <div class="battery medium"></div>
+    <div class="battery high"></div>
+</body>
+</html>
