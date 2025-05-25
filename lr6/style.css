@@ -1,0 +1,188 @@
+/* Базові стилі */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Зручно для контролю розмірів елементів */
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.container {
+    display: flex; /* Для розміщення двох калькуляторів горизонтально */
+    gap: 50px; /* Відстань між ними */
+    justify-content: center;
+}
+
+.calculator {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #e0e0e0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 300px; /* Приблизна ширина калькулятора */
+    margin-bottom: 20px; /* Відступ, якщо будуть переноситися */
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #555;
+    font-size: 1.2em;
+}
+
+.calculator-display {
+    background-color: #a0c0a0; /* Колір екрану калькулятора */
+    border: 1px solid #888;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 15px;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+}
+
+.calculator-display input {
+    background: none;
+    border: none;
+    font-size: 1.1em;
+    color: #333;
+    width: 100%;
+    text-align: right;
+}
+
+.model-name {
+    font-size: 0.8em !important;
+    color: #666 !important;
+    margin-bottom: 5px;
+}
+
+.operation-display {
+    font-size: 1.5em !important;
+    font-weight: bold;
+    color: #222 !important;
+}
+
+
+/* Стилі для кнопок (спільні) */
+.btn {
+    width: 55px; /* Приблизний розмір кнопки */
+    height: 55px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 1.2em;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px; /* Відступ між кнопками */
+}
+
+.btn.operator {
+    background-color: #f8c050; /* Колір для операторів */
+    color: #333;
+}
+
+.btn.equal {
+    background-color: #5cb85c; /* Колір для кнопки = */
+    color: white;
+}
+
+.btn.zero {
+    width: 120px; /* Кнопка 0 ширша */
+}
+
+/* Hover та Active стани для кнопок */
+.btn:hover {
+    background-color: #e6e6e6; /* Світліший колір при наведенні */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.btn.operator:hover {
+    background-color: #ffda82;
+}
+
+.btn.equal:hover {
+    background-color: #6cd06c;
+}
+
+.btn:active {
+    background-color: #d6d6d6; /* Темніший колір при натисканні */
+    transform: translateY(1px); /* Невеликий зсув для ефекту натискання */
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1) inset;
+}
+
+.btn.operator:active {
+    background-color: #e0ac42;
+}
+
+.btn.equal:active {
+    background-color: #4CAF50;
+}
+
+
+/* --- Варіант 1: Float Layout --- */
+.calculator-float .calculator-buttons {
+    /* Контейнер для кнопок, очищення для float */
+    overflow: hidden; /* Щоб батьківський елемент обгортав флоати */
+}
+
+.calculator-float .btn {
+    float: left; /* Всі кнопки розміщуються зліва */
+}
+
+.calculator-float .btn.zero {
+    float: left; /* Кнопка 0 також флоатується */
+}
+
+
+/* --- Варіант 2: Position Layout --- */
+.calculator-position {
+    position: relative; /* Батьківський елемент для absolute positioning */
+    width: 300px; /* Приблизна ширина */
+    height: 400px; /* Приблизна висота, для позиціонування */
+    padding-bottom: 0; /* Щоб кнопки помістилися */
+}
+
+.calculator-position .calculator-buttons-pos {
+    position: absolute;
+    top: 140px; /* Розташування блоку кнопок під дисплеєм */
+    left: 15px; /* Вирівнювання по лівому краю відступу калькулятора */
+    width: calc(100% - 30px); /* Заповнити ширину за вирахуванням падингів */
+}
+
+/* Координати для кожної кнопки*/
+/* Ряд 1: 7 8 9 + */
+.pos-btn-7 { position: absolute; left: 0px; top: 0px; }
+.pos-btn-8 { position: absolute; left: 65px; top: 0px; }
+.pos-btn-9 { position: absolute; left: 130px; top: 0px; }
+.pos-btn-plus { position: absolute; right: 0px; top: 0px; }
+
+/* Ряд 2: 4 5 6 - */
+.pos-btn-4 { position: absolute; left: 0px; top: 65px; }
+.pos-btn-5 { position: absolute; left: 65px; top: 65px; }
+.pos-btn-6 { position: absolute; left: 130px; top: 65px; }
+.pos-btn-minus { position: absolute; right: 0px; top: 65px; }
+
+/* Ряд 3: 1 2 3 / */
+.pos-btn-1 { position: absolute; left: 0px; top: 130px; }
+.pos-btn-2 { position: absolute; left: 65px; top: 130px; }
+.pos-btn-3 { position: absolute; left: 130px; top: 130px; }
+.pos-btn-divide { position: absolute; right: 0px; top: 130px; }
+
+/* Ряд 4: 0 = * */
+.pos-btn-0 { position: absolute; left: 0px; top: 195px; width: 120px; } /* Кнопка 0 ширша */
+.pos-btn-equal { position: absolute; left: 130px; top: 195px; } /* Кнопка = */
+.pos-btn-multiply { position: absolute; right: 0px; top: 195px; } /* Кнопка * */
