@@ -1,104 +1,68 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Моє Резюме</title>
-    <link rel="stylesheet" href="style.css"> </head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Здоров'я з Данилюк</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
 <body>
-    <div class="cv-container">
-        <div class="sidebar">
-            <div class="sidebar-header">
-                <img src="media/photo.jpg" alt="Фото профілю" class="profile-img"> </div>
-
-            <div class="sidebar-section">
-                <h3 class="sidebar-heading">Контакт</h3>
-                <p><strong>Ім'я:</strong> Данилюк Олександр</p>
-                <p><strong>Адреса:</strong> Деркача 6, Івано-Франківськ</p>
-                <p><strong>Телефон:</strong> +380977591007</p>
-                <p><strong>Email:</strong> oleksandr.danyliuk-pi2201@kep.nung.edu.ua</p>
-                <p><strong>Дата народження:</strong> 04-04-2007</p>
-            </div>
-
-            <div class="sidebar-section">
-                <h3 class="sidebar-heading">Навички</h3>
-                <ul>
-                    <li>HTML5, CSS3</li>
-                    <li>C/C++, Python </li>
-                    <li>Бази даних (SQL, MySQL)</li>
-                    <li>Git & GitHub</li>
-                </ul>
-            </div>
-
-            <div class="sidebar-section">
-                <h3 class="sidebar-heading">Мови</h3>
-                <ul>
-                    <li>Українська - Рідна</li>
-                    <li>Англійська - B1</li>
-                </ul>
-            </div>
-
-            <div class="sidebar-section">
-                <h3 class="sidebar-heading">Інтереси</h3>
-                <ul>
-                    <li>Веб-розробка</li>
-                    <li>Технології</li>
-                    <li>Подорожі</li>
-                </ul>
-            </div>
+  <header class="header">
+    <div class="container">
+        <div class="logo">Здоров'я з Данилюк</div>
+        <nav class="nav">
+          <ul class="nav-list">
+            <li><a href="#">Головна</a></li>
+            <li><a href="#services">Послуги</a></li>
+            <li><a href="#footer">Контакти</a></li>
+          </ul>
+        </nav>
+        <div class="phone">
+          <a href="tel:0242555000">📞 024 255 5000</a>
         </div>
+      </div>
+  </header>
 
-        <div class="main-content">
-            <div class="main-section">
-                <h2 class="main-heading">Досвід роботи</h2>
+  <main class="main">
+    <section class="services">
+      <h2>Спеціалізації</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="icon" style="background-image: url('https://picsum.photos/50?1');"></div>
+          <h3>Послуга 1</h3>
+          <p>Короткий опис послуги.</p>
+        </div>
+        <div class="service-card">
+          <div class="icon" style="background-image: url('https://picsum.photos/50?2');"></div>
+          <h3>Послуга 2</h3>
+          <p>Короткий опис послуги.</p>
+        </div>
+        <div class="service-card">
+          <div class="icon" style="background-image: url('https://picsum.photos/50?3');"></div>
+          <h3>Послуга 3</h3>
+          <p>Короткий опис послуги.</p>
+        </div>
+        <div class="service-card">
+          <div class="icon" style="background-image: url('https://picsum.photos/50?4');"></div>
+          <h3>Послуга 4</h3>
+          <p>Короткий опис послуги.</p>
+        </div>
+        <div class="service-card">
+          <div class="icon" style="background-image: url('https://picsum.photos/50?5');"></div>
+          <h3>Послуга 5</h3>
+          <p>Короткий опис послуги.</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
-                <div class="entry">
-                    <div class="entry-header">
-                        <h4 class="entry-title">Студент</h4>
-                        <span class="entry-dates">Вересень 2022 - Теперішній час</span>
-                    </div>
-                    <p class="entry-company">ІФНТУНГ ВСП ФКЕП | Івано-Франківськ</p>
-                    <ul>
-                        <li>Навчання.</li>
-                    </ul>
-                </div>
-            </div> <div class="main-section">
-                <h2 class="main-heading">Освіта</h2>
-                <div class="entry">
-                    <div class="entry-header">
-                        <h4 class="entry-title">Фаховий молодший бакалавр з Інженерії програмного забезпечення</h4>
-                        <span class="entry-dates">Вересень 2022 - Червень 2026 (очікувано)</span> </div>
-                    <p class="entry-company">ВСП "Фаховий коледж електронних приладів ІФНТУНГ" | Івано-Франківськ</p>
-                    <p>Вивчення основ програмування, алгоритмів, баз даних та веб-технологій.</p>
-                </div>
-
-            <div class="main-section">
-                <h2 class="main-heading">Портфоліо</h2>
-                <div class="entry">
-                    <div class="entry-header">
-                        <h4 class="entry-title">Лабораторні роботи</h4>
-                        <span class="entry-dates">2025</span>
-                    </div>
-                        <p><a href="lr1/index.html" class="btn">Лабораторна 1</a></p>
-                        <p><a href="lr2/index.html" class="btn">Лабораторна 2</a></p>
-                        <p><a href="lr3/article.html" class="btn">Лабораторна 3</a></p>
-                        <p><a href="lr4/index.html" class="btn">Лабораторна 4.1</a></p>
-                        <p><a href="lr4/task2.html" class="btn">Лабораторна 4.2</a></p>
-                        <p><a href="lr4/task3.html" class="btn">Лабораторна 4.3</a></p>
-                        <p><a href="lr4/task4.html" class="btn">Лабораторна 4.4</a></p>
-                        <p><a href="lr5/task0/task0.html" class="btn">Лабораторна 5.0</a></p>
-                        <p><a href="lr5/task1/task1.html" class="btn">Лабораторна 5.1</a></p>
-                        <p><a href="lr5/task2/task2.html" class="btn">Лабораторна 5.2</a></p>
-                        <p><a href="lr6/index.html" class="btn">Лабораторна 6</a></p>
-                        <p><a href="pr1/index.html" class="btn">Практична 1</a></p>
-                        <p><a href="pr2/task_lemon/index.html" class="btn">Практична 2.1</a></p>
-                        <p><a href="pr2/task_mriya/cossacs.html" class="btn">Практична 2.2</a></p>
-                        <p><a href="pr3/index.html" class="btn">Практична 3</a></p>
-                        <p><a href="pr4/index.html" class="btn">Практична 4</a></p>
-                        <p><a href="pr5/index.html" class="btn">Практична 5</a></p>
-                </div>
-            </div> 
-        </div> 
+  <footer class="footer">
+    <div class="footer-content">
+      <p>Час прийому: 10:00 – 18:00</p>
+      <p>📞 Екстрений телефон: <a href="tel:02245060">0224 5060</a></p>
+      <p>Данилюк О. М.</p>
     </div>
-    </body>
+  </footer>
+</body>
 </html>
